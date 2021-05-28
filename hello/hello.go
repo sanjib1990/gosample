@@ -1,4 +1,4 @@
-package main
+package hello
 
 import (
 	"context"
@@ -69,7 +69,7 @@ func main() {
 	//}
 }
 
-func foo(c chan  int, val int)  {
+func foo(c chan int, val int) {
 	defer wg.Done()
 	defer cleanUp()
 	c <- val * 5
@@ -134,7 +134,7 @@ func connect() (driver.Database, error) {
 		// Handle error
 	}
 	c, err := driver.NewClient(driver.ClientConfig{
-		Connection: conn,
+		Connection:     conn,
 		Authentication: driver.BasicAuthentication("root", ""),
 	})
 	if err != nil {
@@ -173,7 +173,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	}
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
-	json.NewEncoder(w).Encode(res)
+	_ = json.NewEncoder(w).Encode(res)
 }
 
 func handler2(w http.ResponseWriter, r *http.Request) {
