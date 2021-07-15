@@ -36,3 +36,13 @@ func TestTryOutRace(t *testing.T)  {
     TryOutRace()
     assert.Equal(t, true, true, "The code did not panic")
 }
+
+func TestAddMulti(t *testing.T)  {
+    cal := Calculator{Multi: []int{1,2,3,4}}
+    assert.Equal(t, 10, cal.AddMulti(), "Invalid result of sum(1,2,3,4)")
+}
+
+func TestMultiplyMulti(t *testing.T)  {
+    cal := Calculator{Multi: []int{1,2,3,4}}
+    assert.Equal(t, 24, cal.MultiplyMulti(), "Invalid result of multiply(1,2,3,4)")
+}
