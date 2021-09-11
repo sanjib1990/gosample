@@ -63,10 +63,10 @@ func TryOutRace() {
 		done <- true
 	}()
 	// comment below code to simulate race condition
-	// <-done
+	<-done
 
 	fmt.Println("Hello,", m["name"])
 
 	// uncomment below code to simulate race condition
-	<-done
+	// <-done
 }
