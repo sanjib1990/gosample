@@ -23,19 +23,12 @@ jobs:
 
     - name: Build
       run: go build -race -o runner
-
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-        name: Check out code
-
-      - uses: mr-smithers-excellent/docker-build-push@v5
-        name: Build & push Docker image
-        with:
-          image: sanjibdevnath/gosample
-          tags: ${{github.RUNNER_OS}}.${{github.GITHUB_SHA}}.${{ github.GITHUB_ACTION }} ${{github.RUNNER_OS}}
-          registry: docker.io
-          username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+    
+    - uses: mr-smithers-excellent/docker-build-push@v5
+      name: Build & push Docker image
+      with:
+        image: sanjibdevnath/gosample
+        tags: ${{github.RUNNER_OS}}.${{github.GITHUB_SHA}}.${{ github.GITHUB_ACTION }} ${{github.RUNNER_OS}}
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
