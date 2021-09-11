@@ -35,7 +35,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: sanjibdevnath/gosample
-          tags: ${{RUNNER_OS}}.${{GITHUB_SHA}}.${{ GITHUB_ACTION }} ${{RUNNER_OS}}
+          tags: ${{github.RUNNER_OS}}.${{github.GITHUB_SHA}}.${{ github.GITHUB_ACTION }} ${{github.RUNNER_OS}}
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
