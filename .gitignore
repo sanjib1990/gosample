@@ -118,3 +118,6 @@ DerivedData/
 ## Gcc Patch
 /*.gcno
 
+vendor
+.vscode
+
