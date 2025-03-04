@@ -1,0 +1,26 @@
+goos: darwin
+goarch: arm64
+pkg: sample/prime_numbers
+cpu: Apple M1
+BenchmarkPrimeNumbers/input_size_100-8         	 3826770	       310.2 ns/op
+BenchmarkPrimeNumbers/input_size_100-8         	 3798450	       310.0 ns/op
+BenchmarkPrimeNumbers/input_size_100-8         	 3873913	       313.1 ns/op
+BenchmarkPrimeNumbers/input_size_100-8         	 3871554	       312.5 ns/op
+BenchmarkPrimeNumbers/input_size_100-8         	 3878096	       310.0 ns/op
+BenchmarkPrimeNumbers/input_size_1000-8        	  279939	      3856 ns/op
+BenchmarkPrimeNumbers/input_size_1000-8        	  310005	      3864 ns/op
+BenchmarkPrimeNumbers/input_size_1000-8        	  311542	      3852 ns/op
+BenchmarkPrimeNumbers/input_size_1000-8        	  309830	      3867 ns/op
+BenchmarkPrimeNumbers/input_size_1000-8        	  309644	      3946 ns/op
+BenchmarkPrimeNumbers/input_size_74382-8       	     778	   1472900 ns/op
+BenchmarkPrimeNumbers/input_size_74382-8       	     812	   1482949 ns/op
+BenchmarkPrimeNumbers/input_size_74382-8       	     813	   1479286 ns/op
+BenchmarkPrimeNumbers/input_size_74382-8       	     795	   1492018 ns/op
+BenchmarkPrimeNumbers/input_size_74382-8       	     812	   1480176 ns/op
+BenchmarkPrimeNumbers/input_size_382399-8      	      93	  12916419 ns/op
+BenchmarkPrimeNumbers/input_size_382399-8      	      93	  12871755 ns/op
+BenchmarkPrimeNumbers/input_size_382399-8      	      88	  12966784 ns/op
+BenchmarkPrimeNumbers/input_size_382399-8      	      90	  12942925 ns/op
+BenchmarkPrimeNumbers/input_size_382399-8      	      92	  12976757 ns/op
+PASS
+ok  	sample/prime_numbers	26.720s
